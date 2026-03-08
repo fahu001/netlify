@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flat for Rent</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f3f4f6;
+color:#333;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:20px;
+}
+
+.title{
+text-align:center;
+font-size:32px;
+margin-bottom:20px;
+}
+
+.slider{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides{
+display:flex;
+transition:0.5s;
+}
+
+.slides img{
+width:100%;
+}
+
+.buttons{
+margin-top:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.call{
+background:#2563eb;
+}
+
+.whatsapp{
+background:#22c55e;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#16a34a;
+}
+
+.details{
+line-height:1.8;
+}
+
+.map{
+margin-top:30px;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+Modern 2 Bedroom Flat for Rent
+</div>
+
+<div class="slider">
+
+<div class="slides" id="slides">
+
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+<img src="https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db">
+<img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc">
+
+</div>
+
+</div>
+
+<div class="details">
+
+<p><b>Location:</b> Dhanmondi, Dhaka</p>
+
+<p class="price">
+Rent: 15,000 BDT / Month
+</p>
+
+<ul>
+
+<li>2 Bedrooms</li>
+<li>1 Living Room</li>
+<li>1 Kitchen</li>
+<li>2 Bathrooms</li>
+<li>Balcony</li>
+
+</ul>
+
+<div class="buttons">
+
+<a class="btn call" href="tel:01700000000">
+📞 Call Now
+</a>
+
+<a class="btn whatsapp"
+href="https://wa.me/8801700000000">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="map">
+
+<h3>Location Map</h3>
+
+<iframe
+src="https://maps.google.com/maps?q=dhanmondi%20dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+<script>
+
+let slideIndex=0;
+
+function autoSlide(){
+
+const slides=document.getElementById("slides");
+
+slideIndex++;
+
+if(slideIndex>2){
+slideIndex=0;
+}
+
+slides.style.transform="translateX(-"+slideIndex*100+"%)";
+
+}
+
+setInterval(autoSlide,3000);
+
+</script>
+
+</body>
+</html>
